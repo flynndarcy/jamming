@@ -36,12 +36,12 @@ class App extends Component {
 
 };
 
-this.state.searchResults = this.state.searchResults.bind(this);
-this.state.addTrack = this.state.addTrack.bind(this);
-this.state.removeTrack = this.state.removeTrack.bind(this);
-this.state.updatePlaylist = this.state.updatePlaylist.bind(this);
-this.state.savePlaylist = this.state.savePlaylist.bind(this);
-this.state.search = this.state.search.bind(this);
+//this.searchResults = this.searchResults.bind(this);
+this.addTrack = this.addTrack.bind(this);
+this.removeTrack = this.removeTrack.bind(this);
+this.updatePlaylist = this.updatePlaylist.bind(this);
+this.savePlaylist = this.savePlaylist.bind(this);
+this.search = this.search.bind(this);
 }
 
   addTrack(track)

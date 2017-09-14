@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Track from '../Track/Track'
+import Track from '../Track/Track.js';
 
 class TrackList extends React.Component
 {
@@ -8,8 +8,9 @@ class TrackList extends React.Component
   {
     return(
     <div className="TrackList">
-          <Track key={this.track.id} track={this.track} onAdd={this.props.onAdd} onRemove={this.props.onRemove}  />
-          this.props.tracks.map();
+        {  this.props.tracks.map(track => {
+            <Track key={track.id} track={track} onAdd={this.props.onAdd} onRemove={this.props.onRemove}  />
+          })}
 
     </div>
   )
