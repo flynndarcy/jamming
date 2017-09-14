@@ -60,10 +60,10 @@ return fetch(`https://api.spotify.com/v1/search?type=track&q=term`,
 
   savePlaylist(name, uris)
   {
-    if (!name || !trackUris.length) {
+    if (!name || !uris.length) {
       return;
     }
-    const accessToken = Spotify.getAccessToken();
+    const accessToken = spotify.getAccessToken();
     const headers = { Authorization: `Bearer ${accessToken}` };
     let userId;
     return fetch('https://api.spotify.com/v1/me', {headers: headers}

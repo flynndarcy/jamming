@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 class Track extends React.Component
 {
-  constructor()
+  constructor(props)
   {
     super(props);
 
@@ -22,7 +22,7 @@ class Track extends React.Component
     <h3>{this.props.track.name}</h3>
     <p>{this.props.track.artist} | {this.props.track.album}</p>
   </div>
-  <a className="Track-action"><!-- + or - will go here --></a>
+  <a className="Track-action">renderAction()</a>
 </div>
 
   }

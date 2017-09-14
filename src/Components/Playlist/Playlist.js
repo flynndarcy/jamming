@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TrackList from'../TrackList/TrackList';
 
 class Playlist extends React.Component
 {
 
-constructor()
+constructor(props)
 {
 
   super(props);
@@ -16,16 +17,18 @@ constructor()
 
  handleNameChange(event)
  {
-   value.onNameChange(event.target.value);
+   this.onChange(event.target.value);
  }
 
   render()
   {
+    return(
     <div className="Playlist">
               <input value="New Playlist" onChange={this.handleNameChange}/>
               <TrackList tracks={this.props.playlistTracks} onRemove={this.props.onRemove}/>
               <a className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</a>
     </div>
+  )
 
 
   }
