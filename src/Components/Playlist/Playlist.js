@@ -18,7 +18,7 @@ constructor(props)
 
  handleNameChange(event)
  {
-   this.onChange(event.target.value);
+   this.onNameChange(event.target.value);
  }
 
   render()
