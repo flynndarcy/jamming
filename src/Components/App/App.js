@@ -36,7 +36,7 @@ class App extends Component {
 
 };
 
-//this.searchResults = this.searchResults.bind(this);
+
 this.addTrack = this.addTrack.bind(this);
 this.removeTrack = this.removeTrack.bind(this);
 this.updatePlaylist = this.updatePlaylist.bind(this);

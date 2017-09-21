@@ -28,7 +28,7 @@ const spotify = {
   search(term)
   {
     const accessToken = spotify.getAccessToken();
-return fetch(`https://api.spotify.com/v1/search?type=track&q=term`,
+return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,
   {
     headers:
     {
@@ -41,11 +41,11 @@ return fetch(`https://api.spotify.com/v1/search?type=track&q=term`,
       if (jsonResponse.tracks)
       {
         return jsonResponse.tracks.items.map(track => ({
-          ID: track.id,
-          Name: track.name,
-          Artist: track.artists[0].name,
-          Album: track.album.name,
-          URI: track.uri
+          id: track.id,
+          name: track.name,
+          artist: track.artists[0].name,
+          album: track.album.name,
+          uri: track.uri
 
 
         }));
